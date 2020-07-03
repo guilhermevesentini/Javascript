@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Website example for validations form -->
+    <title>Vesentini. Form</title>
+
+</head>
+<body>
+    <div id="wrapper">
+            <img src="vesentini.png" id="logo"/>
+            <p>Validation form.</p>
+            <div id="msg" ></div><div id="msgSent"></div>
+
+            <form id="myForm" onsubmit="return validate()">
+                <div id="inputField"> 
+                    <input type="text" id="name" name="fname" placeholder="Name">     
+                </div>   
+                <div id="inputField">        
+                    <input type="text" id="email" name="email" placeholder="Email">
+                </div> 
+                <div id="inputField">                
+                    <input type="text" id="subject" name="subject" placeholder="Subject">   
+                </div> 
+                <div id="inputField">            
+                    <textarea type="text" id="message" name="message" placeholder="Message"></textarea>
+                </div> 
+                <div id="inputField">                
+                      <input class="btn" type="submit" value ="Send"></input>
+                </div> 
+            </form>               
+    </div>
+
+<script src="javascript.js">
+
+    
+
+
+    
+
+
+</script>    
+        
+</body>
+</html>

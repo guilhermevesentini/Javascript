@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html {
+    font-family:Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url("15802.png");
+    background-size: cover;
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 350px;
+    width: 100%;
+    background-color: #505050;
+    border: 2px solid rgba(31, 30, 30, 0.329);
+    border-radius: 10px;
+    -webkit-box-shadow: 50px 30px 50px 5px #2e2e2e59;
+    -moz-box-shadow: 50px 30px 50px 5px #2e2e2e59;
+    box-shadow: 20px 20px 10px 0px #2e2e2e59;
+    
+}
+#logo {
+    margin: 0px 0px 0px 5px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+    align-items: center;
+    width: 100%;
+}
+#wrapper > h2 {
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #080808;
+}
+#wrapper > p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+#inputField {
+    text-align: center;
+    margin: 10px;
+    padding: 0px 14%;    
+}
+#inputField > input {
+    padding: 5px 3px;
+    width: 100%;
+    border: 1px solid rgba(247, 247, 247, 0.459);
+}
+#inputField > input:hover {    
+    border: 1px solid #5a8d5aee;
+    transition: all 0.1 ease;
+}
+#inputField > textarea {
+    padding: 5px 3px;
+    width: 100%;
+    max-width: 230px;
+    max-height: 200px;
+    min-height: 80px;
+    border: 1px solid rgba(247, 247, 247, 0.459);
+    font-size: larger;
+}
+#inputField > textarea:hover {    
+    border: 1px solid #5a8d5aee;
+    transition: all 0.5 ease;
+}
+#inputField > .btn {
+    border-radius: 5px;
+    margin: 15px auto;
+    cursor: pointer;
+    font-size: large;
+    border: none;
+    background-color: #67cb95;
+    letter-spacing: 1px;
+}
+#inputField > .btn:hover {
+    background-color: #35d1aa;
+    border: none;
+    
+}
+#wrapper > #msg {
+    border-radius: 5px;
+    background-color: rgb(243, 145, 161);
+    padding: 0px;
+    margin: 0px 10%;
+    transition: all 0.5s ease;
+    text-align: center;
+    font-weight: lighter;  
+    font-size: 15px;  
+}
+#wrapper > #msgSent {
+    border-radius: 5px;
+    background-color: #67cb95;
+    padding: 0px;
+    margin: 0px 10%;
+    transition: all 0.5s ease;
+    text-align: center;
+    font-weight: lighter;  
+    font-size: 15px;  
+}
+
