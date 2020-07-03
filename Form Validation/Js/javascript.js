@@ -13,7 +13,7 @@ function validate() {
 
     msgSent.style.padding="5px";
 
-    if (name == "" || name.length <4) {
+    if (name == "" || name.length <4) {        
         document.getElementById("msg").innerHTML = `Name must be filled out.`;
         msgSent.style.display = "none";
         return false;
@@ -29,17 +29,18 @@ function validate() {
         msgSent.style.display = "none";
         return false;
     }
-    if (message.length < 2){
+    if (message.length < 2) {
         text = "Please, enter a valid message.";
         msg.innerHTML = text;
         msgSent.style.display = "none";
         return false;
-
-    }  else {   
+    }
+    else {    
 
         document.getElementById("msgSent").innerHTML = `<p>Thank you for your contact.</p>
         <p> Your message has been sent.`;
+        
         msg.style.display = "none";
-        return false;          
-   } 
+        return false; 
+    }   
 }
