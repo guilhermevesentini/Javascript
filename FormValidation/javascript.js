@@ -19,7 +19,7 @@ function validate() {
         return false;
     }
     if (email.indexOf("@") == -1 || email.length < 6) {
-        document.getElementById("msg").innerHTML = `Please, enter a valid Email, must contain "@".`;
+        document.getElementById("msg").innerHTML = `Please, enter a valid Email.`;
         msgSent.style.display = "none";
         return false;
     } 
@@ -34,13 +34,12 @@ function validate() {
         msg.innerHTML = text;
         msgSent.style.display = "none";
         return false;
-    }
-    else {    
-
+    } else {    
+        msg.style.display = "none";
         document.getElementById("msgSent").innerHTML = `<p>Thank you for your contact.</p>
         <p> Your message has been sent.`;
+
         
-        msg.style.display = "none";
         return false; 
     }   
 }
