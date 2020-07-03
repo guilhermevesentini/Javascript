@@ -9,9 +9,6 @@ function validate() {
     var msg = document.getElementById("msg");
     var text;
 
-    
-    var myArray = [name, email, subject, message];
-
     msg.style.padding= "5px";
 
     msgSent.style.padding="5px";
@@ -43,7 +40,6 @@ function validate() {
         document.getElementById("msgSent").innerHTML = `<p>Thank you for your contact.</p>
         <p> Your message has been sent.`;
         msg.style.display = "none";
-        return false; 
-          
+        return false;          
    } 
 }
