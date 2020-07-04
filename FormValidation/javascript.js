@@ -40,11 +40,8 @@ function validate(e) {
         msg.innerHTML = text;
         msgSent.style.display = "none";
         return false;
-    } else {
-
-        msg.style.display = "none";
-        text= "Ready to Submit";
-        msgSent.innerHTML = text;      
     }
-    return false;       
+
+    window.alert("Your message has been sent!")    
+    return true;       
 }
