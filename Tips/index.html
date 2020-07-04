@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tips calculator</title>
+
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px 10px;
+        text-align: left;    
+        }
+        .Row {
+            display: table;
+            width: 100%; /*Optional*/
+            table-layout: fixed; /*Optional*/
+            border-spacing: 10px; /*Optional*/
+        }
+        .Column {
+            display: table-cell;
+            background-color: rgb(215, 244, 248); /*Optional*/
+            padding: 25px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #firstLineFloorStaff  input {
+            width: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <h1> Tips Calculator </h1>
+    </div>
+    <div class="Row">
+        <div class="Column">
+            <div id="staffControl" class="staffControlStyle">
+                <div class="tableFloor">
+                    <table onload="copyDiv()">
+                        <div onclick="addFloorStaff()" >
+                        <h2>Floor Staff</h2>
+                        <p>Enter the name of your staff: <input type="text" id="addStaff1"><input id="AddStaffSubmit1" type="submit" value="Add"></p>
+                        </div>
+                        <tr>
+                            <th>Staff:</th>
+                            <th>Enter total of Hours:</th>
+                            <th>Display of Hours</th>
+                        </tr> 
+                        <tr id="firstLineFloorStaff" onclick="addHours()">
+                            <td><div id="receiveName0"></div></td>
+                            <td><input type="text" id="addHours1"><input type="submit" id="buttonAdd1" value="Add"></td>
+                            <td><div id="displayHours1"></div></td>
+                        </tr>
+                        <tr id="firstLineFloorStaff" onclick="addHours()">
+                            <td><div id="receiveName1"></div></td>
+                            <td><input type="text" id="addHours2"><input type="submit" id="buttonAdd2" value="Add"></td>
+                            <td><div id="displayHours2"></div></td>
+                        </tr>                        
+                    </table>
+                </div>
+                <div class="tableKitchen">
+                    <table>
+                        <div onclick="addFloorStaff()" >
+                        <h2>Kitchen Staff</h2>
+                        <p>Enter the name of your staff: <input type="text" id="addStaff2"><input id="AddStaffSubmit2" type="submit" value="Add"></p>
+                        </div>
+                        <tr>
+                            <th>Staff:</th>
+                            <th>Enter total of Hours:</th>
+                            <th>Display of Hours</th>
+                        </tr> 
+                        <tr id="firstLineFloorStaff" onclick="addHours()">
+                            <td><div id="receiveName3"></div></td>
+                            <td><input type="text" id="addHours3"><input type="submit" id="buttonAdd3" value="Add"></td>
+                            <td><div id="displayHours3"></div></td>
+                        </tr>
+                        <tr id="firstLineFloorStaff" onclick="addHours()">
+                            <td><div id="receiveName4"></div></td>
+                            <td><input type="text" id="addHours4"><input type="submit" id="buttonAdd4" value="Add"></td>
+                            <td><div id="displayHours4"></div></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="Column">
+            <table onload="copyDiv()">
+                <div class="">
+                    <h2>Total of tips per Floor staff</h2> 
+                </div>
+
+                    <tr>
+                        <th><div id="firstFloorStaff"></div></th> 
+                        <th><div id="copyFloorHours1"></div></th>                               
+                    </tr>
+                    <tr>
+                        <th><div id="secondFloorStaff">Example</div></th>
+                        <th><div id="copyFloorHours2"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>Exemple</th>
+                        <th></th>            
+                    </tr>   
+            </table>
+            <table>
+                <h2>Total of tips per which Kitchen staff</h2> 
+                <div>   
+                    <tr>
+                        <th><div id="firstKitchenStaff"></div></th>
+                        <th><div id="copyKitchenHours1"></div></th>            
+                    </tr>
+                    <tr>
+                        <th><div id="firstKitchenStaff">Example</div></th>
+                        <th><div id="copyKitchenHours1"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>Exemple</th>
+                        <th></th>            
+                    </tr>
+                </div>    
+            </table>
+        </div>
+        <div class="Column">
+            <table>
+                <h2>Total Per department</h2> 
+                <div class="">   
+                    <tr>
+                        <th>Floor</th>
+                        <th><div id="totalHoursFloor"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>Kitchen</th>
+                        <th><div id="totalKitchenFloor"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>Total Hours Staff</th>
+                        <th><div id="totalHoursStaff"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>Total Tips</th>
+                        <th><div id="totalTips"></div></th>            
+                    </tr>
+                    <tr>
+                        <th>total per hour</th>
+                        <th><div id="totalPerHour"></div></th>            
+                    </tr>
+                </div>    
+            </table>
+            <br>
+            <table>
+                <th>Change</th>
+                <th><div id="totalChange"></div></th> 
+            </table>
+        </div>
+    </div>
+    
+    
+
+
+
+
+<script type="text/javascript">
+
+        // start Example Floor Staff value
+        var staffOne = "Supervisor Brian";
+        document.getElementById("receiveName0").innerHTML = staffOne;        
+        document.getElementById("firstFloorStaff").innerHTML = staffOne; //Total of tips per Floor staff
+
+        var displayHour = "45 hours";
+        document.getElementById("displayHours1").innerHTML = displayHour;
+        document.getElementById("copyFloorHours1").innerHTML = displayHour; //Total of tips per Floor staff
+        // end
+
+        // start  Example Kitchen staff value
+        var stafftwo = "Chef Brandon";
+        document.getElementById("receiveName3").innerHTML = stafftwo;        
+        document.getElementById("firstKitchenStaff").innerHTML = stafftwo; //Total of tips per which Kitchen staff
+
+        var displayHour = "40 hours";
+        document.getElementById("displayHours3").innerHTML = displayHour;        
+        document.getElementById("copyKitchenHours1").innerHTML = displayHour; //Total of tips per which Kitchen staff
+        // end
+
+        // start Display New staff
+        // end
+
+        // start Total Per department
+
+        var totalFloor = "300 hours";
+        document.getElementById("totalHoursFloor").innerHTML = totalFloor;
+
+        var totalKitchen = "500 hours";
+        document.getElementById("totalKitchenFloor").innerHTML = totalKitchen;
+
+        var totalHoursStaff = "800 hours";
+        document.getElementById("totalHoursStaff").innerHTML = totalHoursStaff;
+
+        var totalTips = "1050 hours";
+        document.getElementById("totalTips").innerHTML = totalTips;
+
+        var totalPerHour = "2,5 euros";
+        document.getElementById("totalPerHour").innerHTML = totalPerHour;
+
+        var totalChange = "45,62 euros";
+        document.getElementById("totalChange").innerHTML = totalChange;
+        // end
+
+
+
+
+        function addFloorStaff(){   
+
+            var add = document.getElementById("addStaff1").value;
+            var add2 = document.getElementById("addStaff2").value; 
+            
+
+            document.getElementById("AddStaffSubmit1").onclick = function(){
+                document.getElementById("receiveName1").innerHTML = add;
+            }
+            document.getElementById("AddStaffSubmit2").onclick = function(){
+                document.getElementById("receiveName4").innerHTML = add2;
+            }
+        }
+
+        function addHours(){
+
+            var inputHour1 = document.getElementById("addHours1").value;
+            var inputHour2 = document.getElementById("addHours2").value;
+            var inputHour3 = document.getElementById("addHours3").value;
+            var inputHour4 = document.getElementById("addHours4").value;
+
+            document.getElementById("buttonAdd1").onclick = function() {
+                document.getElementById("displayHours1").innerHTML = inputHour1;               
+            }
+            document.getElementById("buttonAdd2").onclick = function() {
+                document.getElementById("displayHours2").innerHTML = inputHour2;               
+            }
+            document.getElementById("buttonAdd3").onclick = function() {
+                document.getElementById("displayHours3").innerHTML = inputHour3;               
+            }
+            document.getElementById("buttonAdd4").onclick = function() {
+                document.getElementById("displayHours4").innerHTML = inputHour4;               
+            }
+        }
+
+        function copyDiv(){
+
+            
+
+           
+            
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
