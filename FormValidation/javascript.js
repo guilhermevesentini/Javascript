@@ -1,6 +1,6 @@
 
 
-function validate() {
+function validate(e) {
 
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -13,33 +13,38 @@ function validate() {
 
     msgSent.style.padding="5px";
 
-    if (name == "" || name.length <4) {        
+    if (name == "" || name.length < 4) {  
+
         document.getElementById("msg").innerHTML = `Name must be filled out.`;
         msgSent.style.display = "none";
         return false;
     }
-    if (email.indexOf("@") == -1 || email.length < 6) {
-        document.getElementById("msg").innerHTML = `Please, enter a valid Email.`;
+    if (email == "") {
+        document.getElementById("msg").innerHTML = `Email must be filled out.`;
         msgSent.style.display = "none";
         return false;
-    } 
+    }
+    if (email.indexOf("@") == -1 || email.length < 6){
+        document.getElementById("msg").innerHTML = `Please, enter a valid email.`;
+        msgSent.style.display = "none";
+        return false;
+    }
     if (subject == "") {
         text = "Subject must be filled out.";
         msg.innerHTML = text;
         msgSent.style.display = "none";
         return false;
     }
-    if (message.length < 2) {
+    if (message == "" || message.length < 2) {
         text = "Please, enter a valid message.";
         msg.innerHTML = text;
         msgSent.style.display = "none";
         return false;
-    } else {    
-        msg.style.display = "none";
-        document.getElementById("msgSent").innerHTML = `<p>Thank you for your contact.</p>
-        <p> Your message has been sent.`;
+    } else {
 
-        
-        return false; 
-    }   
+        msg.style.display = "none";
+        text= "Ready to Submit";
+        msgSent.innerHTML = text;      
+    }
+    return false;       
 }
