@@ -21,35 +21,52 @@
     // end
 
     // examplo
-    var totalFloor = "300 hours";
-    document.getElementById("totalHoursFloor").innerHTML = totalFloor;
+        
 
-    var totalKitchen = "500 hours";
+    var totalKitchen = "";
     document.getElementById("totalKitchenFloor").innerHTML = totalKitchen;
 
-    var totalHoursStaff = "800 hours";
+    var totalHoursStaff = "";
     document.getElementById("totalHoursStaff").innerHTML = totalHoursStaff;
 
-    var totalTips = "1050 hours";
+    var totalTips = "";
     document.getElementById("totalTips").innerHTML = totalTips;
 
-    var totalPerHour = "2,5 euros";
+    var totalPerHour = "";
     document.getElementById("totalPerHour").innerHTML = totalPerHour;
 
-    var totalChange = "45,62 euros";
+    var totalChange = "";
     document.getElementById("totalChange").innerHTML = totalChange;
+
     // end
-
-    // functions to make calculations
-    // end
-
-
-
     
+    // functions to make calculations
+
+    var a = document.getElementById("displayFloorHours0").value;
+    var b = document.getElementById("displayKitchenHours1");
+    var c = document.getElementById("displayKitchenHours2");
+    var d = document.getElementById("displayKitchenHours3");
+    var e = document.getElementById("displayKitchenHours4");
+    var f = document.getElementById("displayKitchenHours5");
+    var g = document.getElementById("displayKitchenHours6");
+    var h = document.getElementById("displayKitchenHours7");
+    var i = document.getElementById("displayKitchenHours8");
+    var j = document.getElementById("displayKitchenHours8");  
+    
+    document.getElementById("result").innerHTML = a;
+
+    // Floor Hours
+    
+    // end
+
+      
     //bug to fix no passing number value, One caracter missing when typing.
     function copyInputFloor(){
 
-    // Copy string from Floor input
+    // Copy string from Floor input    
+    var lineZero = document.getElementById('receiveNameFloor0');
+    var pasteLineZero = document.getElementById('zeroFloorStaff');
+    
     var lineOne = document.getElementById('receiveNameFloor1');
     var pasteLineOne = document.getElementById('firstFloorStaff');
     
@@ -77,41 +94,11 @@
     var lineNine = document.getElementById('receiveNameFloor9');
     var pasteLineNine = document.getElementById('ninethFloorStaff');
     
-    var lineTen = document.getElementById('receiveNameFloor10');
-    var pasteLineTen = document.getElementById('tenFloorStaff');
     
-    // Copy Number from Floor input
-    var numberLineZero = document.getElementById('displayFloorHours0');
-    var pasteNumberLineZero = document.getElementById('copyFloorHours0');
     
-    var numberLineOne = document.getElementById('displayFloorHours1');
-    var pasteNumberLineOne = document.getElementById('copyFloorHours1');
-    
-    var numberLineTwo = document.getElementById('displayFloorHours2');
-    var pasteNumberLineTwo = document.getElementById('copyFloorHours2');
-    
-    var numberLineThree = document.getElementById('displayFloorHours3');
-    var pasteNumberLineThree = document.getElementById('copyFloorHours3');
-    
-    var numberLineFour = document.getElementById('displayFloorHours4');
-    var pasteNumberLineFour = document.getElementById('copyFloorHours4');
-    
-    var numberLineFive = document.getElementById('displayFloorHours5');
-    var pasteNumberLineFive = document.getElementById('copyFloorHours5');
-    
-    var numberLineSix = document.getElementById('displayFloorHours6');
-    var pasteNumberLineSix = document.getElementById('copyFloorHours6');
-    
-    var numberLineSeven = document.getElementById('displayFloorHours7');
-    var pasteNumberLineSeven = document.getElementById('copyFloorHours7');
-    
-    var numberLineEight = document.getElementById('displayFloorHours8');
-    var pasteNumberLineEight = document.getElementById('copyFloorHours8');
-    
-    var numberLineNine = document.getElementById('displayFloorHours9');
-    var pasteNumberLineNine = document.getElementById('copyFloorHours9');
     
     // Copy String Floor
+    pasteLineZero.innerHTML = lineZero.innerHTML;
     pasteLineOne.innerHTML = lineOne.innerHTML;
     pasteLineTwo.innerHTML = lineTwo.innerHTML;
     pasteLineThree.innerHTML = lineThree.innerHTML;
@@ -121,18 +108,8 @@
     pasteLineSeven.innerHTML = lineSeven.innerHTML;
     pasteLineEight.innerHTML = lineEight.innerHTML;
     pasteLineNine.innerHTML = lineNine.innerHTML;
-    pasteLineTen.innerHTML = lineTen.innerHTML;
-    //
-    pasteNumberLineZero.innerHTML = numberLineZero.innerHTML;
-    pasteNumberLineOne.innerHTML = numberLineOne.innerHTML;
-    pasteNumberLineTwo.innerHTML = numberLineTwo.innerHTML;
-    pasteNumberLineThree.innerHTML = numberLineThree.innerHTML;
-    pasteNumberLineFour.innerHTML = numberLineFour.innerHTML;
-    pasteNumberLineFive.innerHTML = numberLineFive.innerHTML;
-    pasteNumberLineSix.innerHTML = numberLineSix.innerHTML;
-    pasteNumberLineSeven.innerHTML = numberLineSeven.innerHTML;
-    pasteNumberLineEight.innerHTML = numberLineEight.innerHTML;
-    pasteNumberLineNine.innerHTML = numberLineNine.innerHTML;
+
+    
     }    
     //bug to fix no passing number value, One caracter missing when typing.
     function copyInputKitchen(){
@@ -166,38 +143,8 @@
     var pasteLineKitchenEight = document.getElementById('eightKitchenStaff');
     
     var lineKitchenNine = document.getElementById('receiveNameKitchen9');
-    var pasteLineKitchenNine = document.getElementById('nineKitchenStaff');
-    //
-    // Copy Number from Kitchen input
-    var numberLineZero = document.getElementById('displayKitchenHours0');
-    var pasteNumberLineZero = document.getElementById('copyKitchenHours0');
+    var pasteLineKitchenNine = document.getElementById('nineKitchenStaff');    //
     
-    var numberLineOne = document.getElementById('displayKitchenHours1');
-    var pasteNumberLineOne = document.getElementById('copyKitchenHours1');
-    
-    var numberLineTwo = document.getElementById('displayKitchenHours2');
-    var pasteNumberLineTwo = document.getElementById('copyKitchenHours2');
-    
-    var numberLineThree = document.getElementById('displayKitchenHours3');
-    var pasteNumberLineThree = document.getElementById('copyKitchenHours3');
-    
-    var numberLineFour = document.getElementById('displayKitchenHours4');
-    var pasteNumberLineFour = document.getElementById('copyKitchenHours4');
-    
-    var numberLineFive = document.getElementById('displayKitchenHours5');
-    var pasteNumberLineFive = document.getElementById('copyKitchenHours5');
-    
-    var numberLineSix = document.getElementById('displayKitchenHours6');
-    var pasteNumberLineSix = document.getElementById('copyKitchenHours6');
-    
-    var numberLineSeven = document.getElementById('displayKitchenHours7');
-    var pasteNumberLineSeven = document.getElementById('copyKitchenHours7');
-    
-    var numberLineEight = document.getElementById('displayKitchenHours8');
-    var pasteNumberLineEight = document.getElementById('copyKitchenHours8');
-    
-    var numberLineNine = document.getElementById('displayKitchenHours9');
-    var pasteNumberLineNine = document.getElementById('copyKitchenHours9');
     
     // Kitchen paste
     pasteLineKitchenZero.innerHTML = lineKitchenZero.innerHTML;
@@ -209,20 +156,15 @@
     pasteLineKitchenSix.innerHTML = lineKitchenSix.innerHTML;
     pasteLineKitchenSeven.innerHTML = lineKitchenSeven.innerHTML;
     pasteLineKitchenEight.innerHTML = lineKitchenEight.innerHTML;
-    pasteLineKitchenNine.innerHTML = lineKitchenNine.innerHTML;
+    pasteLineKitchenNine.innerHTML = lineKitchenNine.innerHTML;    
     
-    // Kitchen Number
-    pasteNumberLineZero.innerHTML = numberLineZero.innerHTML;
-    pasteNumberLineOne.innerHTML = numberLineOne.innerHTML;
-    pasteNumberLineTwo.innerHTML = numberLineTwo.innerHTML;
-    pasteNumberLineThree.innerHTML = numberLineThree.innerHTML;
-    pasteNumberLineFour.innerHTML = numberLineFour.innerHTML;
-    pasteNumberLineFive.innerHTML = numberLineFive.innerHTML;
-    pasteNumberLineSix.innerHTML = numberLineSix.innerHTML;
-    pasteNumberLineSeven.innerHTML = numberLineSeven.innerHTML;
-    pasteNumberLineEight.innerHTML = numberLineEight.innerHTML;
-    pasteNumberLineNine.innerHTML = numberLineNine.innerHTML;
     
+    }
+    function totalHoursFloor(){     
+       
+    }
+    function totalHoursKitchen(){
+
     }
     // not in use
     function addFloorStaff(){   
