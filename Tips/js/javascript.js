@@ -101,7 +101,7 @@
 
     document.getElementById('totalHoursStaff').innerHTML = totalHours;
 
-    totalTipsValue = 850;
+    totalTipsValue = document.getElementById('totalTips').outerText;
 
     document.getElementById('totalTips').innerHTML = totalTipsValue;
     

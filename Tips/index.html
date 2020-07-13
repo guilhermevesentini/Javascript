@@ -9,11 +9,12 @@
 
 
 </head>
-<body>
-    <h1> Tips Calculator </h1>
+<body>    
+
+    <h1 onClick="document.location.reload(true)"> Tips Calculator </h1>
     </div>
     <div class="Row">
-        <div class="Column"><!-- Entry info Staff Section -->
+        <div class="Column"><!-- Floor -->
             <div>
                 <div onkeypress="copyInputFloor()">
                     <table>
@@ -24,46 +25,57 @@
                         <tr>
                             <th>Staff:</th>
                             <th>Worked Hours</th>
+                            <th>Total os Tips</th>
                         </tr> 
                         <tr>
                             <td><div id="receiveNameFloor0" contentEditable="true"></div></td>
                             <td><div type="number" id="displayFloorHours0" class="numberFunction" contentEditable="true"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours0" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor1" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours1" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours1" ></div></td> 
                         </tr>  
                         <tr>
                             <td><div id="receiveNameFloor2" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours2" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours2" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor3" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours3" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours3" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor4" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours4" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours4" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor5" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours5" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours5" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor6" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours6" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours6" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor7" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours7" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours7" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor8" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours8" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours8" ></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameFloor9" contentEditable="true">Example</div></td>
                             <td><div id="displayFloorHours9" contentEditable="true" class="numberFunction"></div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours9" ></div></td> 
                         </tr>   
                                    
                     </table>
@@ -71,6 +83,11 @@
                     <!--<label for="input"> Save this table:</label>
                     <input id="floorBtn" type="submit" value="Save"> -->
                 </div>
+                
+            </div>
+        </div>
+        <div class="Column"><!-- Kitchen -->  
+            <div>  
                 <div onkeypress="copyInputKitchen()">
                     <table>
                         <div>
@@ -80,178 +97,96 @@
                         <tr>
                             <th>Staff:</th>
                             <th>Worked Hours</th>
+                            <th>Total os Tips</th>
                         </tr> 
                         <tr>
                             <td><div id="receiveNameKitchen0" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours0" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours0"></div></td> 
+                            
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen1" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours1" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><div id="displayKitchenHours1" contentEditable="true" class=".numberFunctionK"></div></td>                            
+                            <td><span>&#8364 </span><div id="copyKitchenHours1"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen2" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours2" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours2"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen3" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours3" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours3"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen4" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours4" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours4"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen5" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours5" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours5"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen6" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours6" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours6"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen7" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours7" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours7"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen8" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours8" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours8"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen9" contentEditable="true">Example</div></td>
                             <td><div id="displayKitchenHours9" contentEditable="true" class=".numberFunctionK"></div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours9"></div></td> 
                         </tr>                       
                     </table>
                 </div>
-            </div>
-        </div>
-        <div class="Column"><!-- Total tips -->
-            
-            <table><!--floor total tips -->
-                <div>
-                    <h2>Total of tips per Floor staff</h2> 
-                </div>
-                    <tr>
-                        <th><div id="zeroFloorStaff">Example</div></th> 
-                        <th><div id="copyFloorHours0" ></div></th>                               
-                    </tr>
-                    <tr>
-                        <th><div id="firstFloorStaff" class="totalResult">Example</div></th> 
-                        <th><div id="copyFloorHours1"></div></th>                               
-                    </tr>
-                    <tr>
-                        <th><div id="secondFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours2"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="thirdFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours3"></div></th>            
-                    </tr> 
-                    <tr>
-                        <th><div id="forthFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours4"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="fifthFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours5"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="sixthFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours6"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="seventhFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours7"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="eighthFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours8"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="ninethFloorStaff" class="totalResult">Example</div></th>
-                        <th><div id="copyFloorHours9"></div></th>            
-                    </tr> 
-            </table>
-            
-            <table><!--Kitchen Total Tips -->
-                <h2>Total of tips per which Kitchen staff</h2> 
-                <div>   
-                    <tr>
-                        <th><div id="zeroKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours0"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="firstKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours1"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="SecondKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours2"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="thirdKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours3"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="fourthKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours4"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="fifthKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours5"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="sixthKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours6"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="seventhKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours7"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="eightKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours8"></div></th>            
-                    </tr>
-                    <tr>
-                        <th><div id="nineKitchenStaff">Example</div></th>
-                        <th><div id="copyKitchenHours9"></div></th>            
-                    </tr>
-                </div>    
-            </table>
-        </div>
+            </div>        
+        
+        </div> 
         <div class="Column"><!-- Resume Per department  -->
             <table>
                 <h2>Total Per department</h2> 
+                <p>Enter the total of Tips:</p>
                 <div>   
                     <tr>
-                        <th>Floor</th>
-                        <th><div id="totalHoursFloor"></div></th>            
+                        <td>Floor Hours</td>
+                        <td><div id="totalHoursFloor"></div></td>            
                     </tr>
                     <tr>
-                        <th>Kitchen</th>
-                        <th><div id="totalKitchen"></div></th>            
+                        <td>Kitchen Hours</td>
+                        <td><div id="totalKitchen"></div></td>            
                     </tr>
                     <tr>
-                        <th>Total Hours Staff</th>
-                        <th><div id="totalHoursStaff"></div></th>            
+                        <td>Total of Hours</td>
+                        <td><div id="totalHoursStaff"></div></td>            
                     </tr>
                     <tr>
-                        <th>Total Tips</th>
-                        <th><div id="totalTips" contentEditable="true"></div></th>            
+                        <td>Total of Tips</td>
+                        <td><span>&#8364 </span><div id="totalTips" contentEditable="true"></div></td>            
                     </tr>
                     <tr>
-                        <th>total per hour</th>
-                        <th><div id="totalPerHour"></div></th>            
-                    </tr>
-                </div>    
+                        <td>Total per Hour</td>
+                        <td><span>&#8364 </span><div id="totalPerHour"></div></td>            
+                    </tr>                    
+                </div>                   
             </table>
             <br>
-            <table>
-                <th>Change</th>
-                <th><div id="totalChange"></div></th> 
-            </table>
+            <p>Content <strong>Staff</strong>, <strong>Worked Hours</strong> and <strong>Total of Tips</strong> is editable.</p> 
+            <p>Click on Tips Calculator to update the changes.</p>
+
         </div>
-    </div> 
     
     <script src="./js/javascript.js">
     
