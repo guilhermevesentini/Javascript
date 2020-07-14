@@ -9,14 +9,14 @@
 
 
 </head>
-<body>    
+<body onload="onLoadFuntion()">    
 
-    <h1 onClick="document.location.reload(true)"> Tips Calculator </h1>
+    <h1 id="refreshPage" onClick="document.location.reload(true)"> Tips Calculator </h1>
     </div>
     <div class="Row">
         <div class="Column"><!-- Floor -->
             <div>
-                <div onkeypress="copyInputFloor()">
+                <div onkeypress="copyInput()">
                     <table>
                         <div>
                             <h2>Floor Staff</h2>
@@ -28,54 +28,54 @@
                             <th>Total os Tips</th>
                         </tr> 
                         <tr>
-                            <td><div id="receiveNameFloor0" contentEditable="true"></div></td>
-                            <td><div type="number" id="displayFloorHours0" class="numberFunction" contentEditable="true"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours0" ></div></td> 
+                            <td><div id="receiveNameFloor0" contentEditable="true">Example</div></td>
+                            <td><div type="number" id="displayFloorHours0" class="numberFunction" contentEditable="true">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours0" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor1" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours1" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours1" ></div></td> 
+                            <td><div id="receiveNameFloor1" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours1" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours1" class="notANumber"></div></td> 
                         </tr>  
                         <tr>
-                            <td><div id="receiveNameFloor2" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours2" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours2" ></div></td> 
+                            <td><div id="receiveNameFloor2" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours2" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours2" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor3" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours3" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours3" ></div></td> 
+                            <td><div id="receiveNameFloor3" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours3" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours3" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor4" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours4" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours4" ></div></td> 
+                            <td><div id="receiveNameFloor4" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours4" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours4" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor5" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours5" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours5" ></div></td> 
+                            <td><div id="receiveNameFloor5" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours5" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours5" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor6" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours6" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours6" ></div></td> 
+                            <td><div id="receiveNameFloor6" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours6" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours6" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor7" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours7" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours7" ></div></td> 
+                            <td><div id="receiveNameFloor7" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours7" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours7" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor8" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours8" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours8" ></div></td> 
+                            <td><div id="receiveNameFloor8" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours8" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours8" class="notANumber"></div></td> 
                         </tr>
                         <tr>
-                            <td><div id="receiveNameFloor9" contentEditable="true">Example</div></td>
-                            <td><div id="displayFloorHours9" contentEditable="true" class="numberFunction"></div></td>
-                            <td><span>&#8364 </span><div id="copyFloorHours9" ></div></td> 
+                            <td><div id="receiveNameFloor9" placeholder="Example" contentEditable="true">Example</div></td>
+                            <td><div id="displayFloorHours9" contentEditable="true" class="numberFunction">10</div></td>
+                            <td><span>&#8364 </span><div id="copyFloorHours9" class="notANumber"></div></td> 
                         </tr>   
                                    
                     </table>
@@ -88,7 +88,7 @@
         </div>
         <div class="Column"><!-- Kitchen -->  
             <div>  
-                <div onkeypress="copyInputKitchen()">
+                <div onkeypress="copyInput()">
                     <table>
                         <div>
                             <h2>Kitchen Staff</h2>
@@ -101,54 +101,54 @@
                         </tr> 
                         <tr>
                             <td><div id="receiveNameKitchen0" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours0" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours0"></div></td> 
+                            <td><div id="displayKitchenHours0" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours0" class="notANumber"></div></td> 
                             
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen1" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours1" contentEditable="true" class=".numberFunctionK"></div></td>                            
-                            <td><span>&#8364 </span><div id="copyKitchenHours1"></div></td> 
+                            <td><div id="displayKitchenHours1" contentEditable="true" class="numberFunctionK">10</div></td>                            
+                            <td><span>&#8364 </span><div id="copyKitchenHours1" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen2" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours2" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours2"></div></td> 
+                            <td><div id="displayKitchenHours2" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours2" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen3" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours3" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours3"></div></td> 
+                            <td><div id="displayKitchenHours3" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours3" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen4" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours4" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours4"></div></td> 
+                            <td><div id="displayKitchenHours4" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours4" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen5" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours5" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours5"></div></td> 
+                            <td><div id="displayKitchenHours5" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours5" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen6" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours6" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours6"></div></td> 
+                            <td><div id="displayKitchenHours6" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours6" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen7" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours7" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours7"></div></td> 
+                            <td><div id="displayKitchenHours7" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours7" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen8" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours8" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours8"></div></td> 
+                            <td><div id="displayKitchenHours8" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours8" class="notANumber"></div></td> 
                         </tr>
                         <tr>
                             <td><div id="receiveNameKitchen9" contentEditable="true">Example</div></td>
-                            <td><div id="displayKitchenHours9" contentEditable="true" class=".numberFunctionK"></div></td>
-                            <td><span>&#8364 </span><div id="copyKitchenHours9"></div></td> 
+                            <td><div id="displayKitchenHours9" contentEditable="true" class="numberFunctionK">10</div></td>
+                            <td><span>&#8364 </span><div id="copyKitchenHours9" class="notANumber"></div></td> 
                         </tr>                       
                     </table>
                 </div>
@@ -174,11 +174,11 @@
                     </tr>
                     <tr>
                         <td>Total of Tips</td>
-                        <td><span>&#8364 </span><div id="totalTips" contentEditable="true"></div></td>            
+                        <td><span>&#8364 </span><div id="totalTips" contentEditable="true">100</div></td>            
                     </tr>
                     <tr>
                         <td>Total per Hour</td>
-                        <td><span>&#8364 </span><div id="totalPerHour"></div></td>            
+                        <td><span>&#8364 </span><div id="totalPerHour">0</div></td>            
                     </tr>                    
                 </div>                   
             </table>

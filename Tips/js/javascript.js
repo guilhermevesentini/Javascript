@@ -39,7 +39,7 @@
     
     //console.log(storage[1].outerText);
     //------------- Calculations -----------------//
-
+    
 
     const myArray = ['.numberFunctionFloor'];
     //const a = document.querySelectorAll('.numberFunction');
@@ -52,7 +52,7 @@
     const g = document.getElementById('displayFloorHours6').outerText;
     const h = document.getElementById('displayFloorHours7').outerText;
     const i = document.getElementById('displayFloorHours8').outerText;
-    const j = document.getElementById('displayFloorHours9').outerText;
+    const j = document.getElementById('displayFloorHours9').outerText;    
 
     const total = 
     parseInt(a) +
@@ -71,16 +71,16 @@
 
     const myArrayKitchen = ['.numberFunctionK'];
     // 
-    const kitchen0 = document.getElementById('displayKitchenHours0').outerText;
-    const k1 = document.getElementById('displayKitchenHours1').outerText;
-    const k2 = document.getElementById('displayKitchenHours2').outerText;
-    const k3 = document.getElementById('displayKitchenHours3').outerText;
-    const k4 = document.getElementById('displayKitchenHours4').outerText;
-    const k5 = document.getElementById('displayKitchenHours5').outerText;
-    const k6 = document.getElementById('displayKitchenHours6').outerText;
-    const k7 = document.getElementById('displayKitchenHours7').outerText;
-    const k8 = document.getElementById('displayKitchenHours8').outerText;
-    const k9 = document.getElementById('displayKitchenHours9').outerText;
+    const kitchen0 = Number(document.getElementById('displayKitchenHours0').outerText);
+    const k1 = Number(document.getElementById('displayKitchenHours1').outerText);
+    const k2 = Number(document.getElementById('displayKitchenHours2').outerText);
+    const k3 = Number(document.getElementById('displayKitchenHours3').outerText);
+    const k4 = Number(document.getElementById('displayKitchenHours4').outerText);
+    const k5 = Number(document.getElementById('displayKitchenHours5').outerText);
+    const k6 = Number(document.getElementById('displayKitchenHours6').outerText);
+    const k7 = Number(document.getElementById('displayKitchenHours7').outerText);
+    const k8 = Number(document.getElementById('displayKitchenHours8').outerText);
+    const k9 = Number(document.getElementById('displayKitchenHours9').outerText);;
 
     const totalHoursKitchen =
     parseInt(kitchen0) + 
@@ -108,20 +108,21 @@
     var totalPerHour = totalTipsValue / totalHours;    
 
     document.getElementById('totalPerHour').innerHTML = totalPerHour.toFixed(2);    
-    
-    // Total per tips Floor
-    
-    const F0 = document.getElementById('displayFloorHours0').outerText;
-    const F1 = document.getElementById('displayFloorHours1').outerText;
-    const F2 = document.getElementById('displayFloorHours2').outerText;
-    const F3 = document.getElementById('displayFloorHours3').outerText;
-    const F4 = document.getElementById('displayFloorHours4').outerText;
-    const F5 = document.getElementById('displayFloorHours5').outerText;
-    const F6 = document.getElementById('displayFloorHours6').outerText;
-    const F7 = document.getElementById('displayFloorHours7').outerText;
-    const F8 = document.getElementById('displayFloorHours8').outerText;
-    const F9 = document.getElementById('displayFloorHours9').outerText;
 
+    // Total per tips Floor
+        
+    const F0 = Number(document.getElementById('displayFloorHours0').outerText);
+    const F1 = Number(document.getElementById('displayFloorHours1').outerText);
+    const F2 = Number(document.getElementById('displayFloorHours2').outerText);
+    const F3 = Number(document.getElementById('displayFloorHours3').outerText);
+    const F4 = Number(document.getElementById('displayFloorHours4').outerText);
+    const F5 = Number(document.getElementById('displayFloorHours5').outerText);
+    const F6 = Number(document.getElementById('displayFloorHours6').outerText);
+    const F7 = Number(document.getElementById('displayFloorHours7').outerText);
+    const F8 = Number(document.getElementById('displayFloorHours8').outerText);
+    const F9 = Number(document.getElementById('displayFloorHours9').outerText);
+
+    
     const totalTips0 = parseInt(F0) * totalPerHour.toFixed(2);
     const totalTipsa = parseInt(F1) * totalPerHour.toFixed(2);
     const totalTipsb = parseInt(F2) * totalPerHour.toFixed(2);
@@ -169,7 +170,8 @@
     document.getElementById('copyKitchenHours6').innerHTML = totalTipsKitchenf.toFixed(2);
     document.getElementById('copyKitchenHours7').innerHTML = totalTipsKitcheng.toFixed(2);
     document.getElementById('copyKitchenHours8').innerHTML = totalTipsKitchenh.toFixed(2);
-    document.getElementById('copyKitchenHours9').innerHTML = totalTipsKitcheni.toFixed(2);
+    document.getElementById('copyKitchenHours9').innerHTML = totalTipsKitcheni.toFixed(2); 
+    
 
     //console.log(a[1].outerText);
 
@@ -177,110 +179,120 @@
     //------------- END Calculations -----------------//
 
 
-      
-    //bug to fix no passing number value, One caracter missing when typing.
-    function copyInputFloor() {
+    function copyInput() {
 
-        // Copy string from Floor input    
-        var lineZero = document.getElementById('receiveNameFloor0');
-        var pasteLineZero = document.getElementById('zeroFloorStaff');
+        addEventListener('copyFloor', copyInputFloor);
+        addEventListener('copyKitchen', copyInputKitchen);
+
+     
+        //bug to fix no passing number value, One caracter missing when typing.
+        function copyInputFloor() {
+
+            // Copy string from Floor input    
+            var lineZero = document.getElementById('receiveNameFloor0');
+            var pasteLineZero = document.getElementById('zeroFloorStaff');
+            
+            var lineOne = document.getElementById('receiveNameFloor1');
+            var pasteLineOne = document.getElementById('firstFloorStaff');
+            
+            var lineTwo = document.getElementById('receiveNameFloor2');
+            var pasteLineTwo = document.getElementById('secondFloorStaff');
+            
+            var lineThree = document.getElementById('receiveNameFloor3');
+            var pasteLineThree = document.getElementById('thirdFloorStaff');
+            
+            var lineFour = document.getElementById('receiveNameFloor4');
+            var pasteLineFour = document.getElementById('forthFloorStaff');
+            
+            var lineFive = document.getElementById('receiveNameFloor5');
+            var pasteLineFive = document.getElementById('fifthFloorStaff');
+            
+            var lineSix = document.getElementById('receiveNameFloor6');
+            var pasteLineSix = document.getElementById('sixthFloorStaff');
+            
+            var lineSeven = document.getElementById('receiveNameFloor7');
+            var pasteLineSeven = document.getElementById('seventhFloorStaff');
+            
+            var lineEight = document.getElementById('receiveNameFloor8');
+            var pasteLineEight = document.getElementById('eighthFloorStaff');
+            
+            var lineNine = document.getElementById('receiveNameFloor9');
+            var pasteLineNine = document.getElementById('ninethFloorStaff');
+            
+            
+            
+            
+            // Copy String Floor
+            pasteLineZero.innerHTML = lineZero.innerHTML;
+            pasteLineOne.innerHTML = lineOne.innerHTML;
+            pasteLineTwo.innerHTML = lineTwo.innerHTML;
+            pasteLineThree.innerHTML = lineThree.innerHTML;
+            pasteLineFour.innerHTML = lineFour.innerHTML;
+            pasteLineFive.innerHTML = lineFive.innerHTML;
+            pasteLineSix.innerHTML = lineSix.innerHTML;
+            pasteLineSeven.innerHTML = lineSeven.innerHTML;
+            pasteLineEight.innerHTML = lineEight.innerHTML;
+            pasteLineNine.innerHTML = lineNine.innerHTML;
+
+            
+
+            const button = document.querySelector('#floorBtn'); 
         
-        var lineOne = document.getElementById('receiveNameFloor1');
-        var pasteLineOne = document.getElementById('firstFloorStaff');
-        
-        var lineTwo = document.getElementById('receiveNameFloor2');
-        var pasteLineTwo = document.getElementById('secondFloorStaff');
-        
-        var lineThree = document.getElementById('receiveNameFloor3');
-        var pasteLineThree = document.getElementById('thirdFloorStaff');
-        
-        var lineFour = document.getElementById('receiveNameFloor4');
-        var pasteLineFour = document.getElementById('forthFloorStaff');
-        
-        var lineFive = document.getElementById('receiveNameFloor5');
-        var pasteLineFive = document.getElementById('fifthFloorStaff');
-        
-        var lineSix = document.getElementById('receiveNameFloor6');
-        var pasteLineSix = document.getElementById('sixthFloorStaff');
-        
-        var lineSeven = document.getElementById('receiveNameFloor7');
-        var pasteLineSeven = document.getElementById('seventhFloorStaff');
-        
-        var lineEight = document.getElementById('receiveNameFloor8');
-        var pasteLineEight = document.getElementById('eighthFloorStaff');
-        
-        var lineNine = document.getElementById('receiveNameFloor9');
-        var pasteLineNine = document.getElementById('ninethFloorStaff');
-        
-        
-        
-        
-        // Copy String Floor
-        pasteLineZero.innerHTML = lineZero.innerHTML;
-        pasteLineOne.innerHTML = lineOne.innerHTML;
-        pasteLineTwo.innerHTML = lineTwo.innerHTML;
-        pasteLineThree.innerHTML = lineThree.innerHTML;
-        pasteLineFour.innerHTML = lineFour.innerHTML;
-        pasteLineFive.innerHTML = lineFive.innerHTML;
-        pasteLineSix.innerHTML = lineSix.innerHTML;
-        pasteLineSeven.innerHTML = lineSeven.innerHTML;
-        pasteLineEight.innerHTML = lineEight.innerHTML;
-        pasteLineNine.innerHTML = lineNine.innerHTML;
+        }    
 
         
-
-        const button = document.querySelector('#floorBtn'); 
-    
-    }    
-
-    
-    //bug to fix no passing number value, One caracter missing when typing.
-    function copyInputKitchen(){
-    
-    // Copy string from Kitchen input
-    var lineKitchenZero = document.getElementById('receiveNameKitchen0');
-    var pasteLineKitchenZero = document.getElementById('zeroKitchenStaff');
-    
-    var lineKitchenOne = document.getElementById('receiveNameKitchen1');
-    var pasteLineKitchenOne = document.getElementById('firstKitchenStaff');
-    
-    var lineKitchenTwo = document.getElementById('receiveNameKitchen2');
-    var pasteLineKitchenTwo = document.getElementById('SecondKitchenStaff');
-    
-    var lineKitchenThree = document.getElementById('receiveNameKitchen3');
-    var pasteLineKitchenThree = document.getElementById('thirdKitchenStaff');
-    
-    var lineKitchenFour = document.getElementById('receiveNameKitchen4');
-    var pasteLineKitchenFour = document.getElementById('fourthKitchenStaff');
-    
-    var lineKitchenFive = document.getElementById('receiveNameKitchen5');
-    var pasteLineKitchenFive = document.getElementById('fifthKitchenStaff');
-    
-    var lineKitchenSix = document.getElementById('receiveNameKitchen6');
-    var pasteLineKitchenSix = document.getElementById('sixthKitchenStaff');
-    
-    var lineKitchenSeven = document.getElementById('receiveNameKitchen7');
-    var pasteLineKitchenSeven = document.getElementById('seventhKitchenStaff');
-    
-    var lineKitchenEight = document.getElementById('receiveNameKitchen8');
-    var pasteLineKitchenEight = document.getElementById('eightKitchenStaff');
-    
-    var lineKitchenNine = document.getElementById('receiveNameKitchen9');
-    var pasteLineKitchenNine = document.getElementById('nineKitchenStaff');    
-    //
-    
-    
-    // Kitchen paste
-    pasteLineKitchenZero.innerHTML = lineKitchenZero.innerHTML;
-    pasteLineKitchenOne.innerHTML = lineKitchenOne.innerHTML;
-    pasteLineKitchenTwo.innerHTML = lineKitchenTwo.innerHTML;
-    pasteLineKitchenThree.innerHTML = lineKitchenThree.innerHTML;
-    pasteLineKitchenFour.innerHTML = lineKitchenFour.innerHTML;
-    pasteLineKitchenFive.innerHTML = lineKitchenFive.innerHTML;
-    pasteLineKitchenSix.innerHTML = lineKitchenSix.innerHTML;
-    pasteLineKitchenSeven.innerHTML = lineKitchenSeven.innerHTML;
-    pasteLineKitchenEight.innerHTML = lineKitchenEight.innerHTML;
-    pasteLineKitchenNine.innerHTML = lineKitchenNine.innerHTML;    
-    
-    
+        //bug to fix no passing number value, One caracter missing when typing.
+        function copyInputKitchen(){
+        
+        // Copy string from Kitchen input
+        var lineKitchenZero = document.getElementById('receiveNameKitchen0');
+        var pasteLineKitchenZero = document.getElementById('zeroKitchenStaff');
+        
+        var lineKitchenOne = document.getElementById('receiveNameKitchen1');
+        var pasteLineKitchenOne = document.getElementById('firstKitchenStaff');
+        
+        var lineKitchenTwo = document.getElementById('receiveNameKitchen2');
+        var pasteLineKitchenTwo = document.getElementById('SecondKitchenStaff');
+        
+        var lineKitchenThree = document.getElementById('receiveNameKitchen3');
+        var pasteLineKitchenThree = document.getElementById('thirdKitchenStaff');
+        
+        var lineKitchenFour = document.getElementById('receiveNameKitchen4');
+        var pasteLineKitchenFour = document.getElementById('fourthKitchenStaff');
+        
+        var lineKitchenFive = document.getElementById('receiveNameKitchen5');
+        var pasteLineKitchenFive = document.getElementById('fifthKitchenStaff');
+        
+        var lineKitchenSix = document.getElementById('receiveNameKitchen6');
+        var pasteLineKitchenSix = document.getElementById('sixthKitchenStaff');
+        
+        var lineKitchenSeven = document.getElementById('receiveNameKitchen7');
+        var pasteLineKitchenSeven = document.getElementById('seventhKitchenStaff');
+        
+        var lineKitchenEight = document.getElementById('receiveNameKitchen8');
+        var pasteLineKitchenEight = document.getElementById('eightKitchenStaff');
+        
+        var lineKitchenNine = document.getElementById('receiveNameKitchen9');
+        var pasteLineKitchenNine = document.getElementById('nineKitchenStaff');    
+        //
+        
+        
+        // Kitchen paste
+        pasteLineKitchenZero.innerHTML = lineKitchenZero.innerHTML;
+        pasteLineKitchenOne.innerHTML = lineKitchenOne.innerHTML;
+        pasteLineKitchenTwo.innerHTML = lineKitchenTwo.innerHTML;
+        pasteLineKitchenThree.innerHTML = lineKitchenThree.innerHTML;
+        pasteLineKitchenFour.innerHTML = lineKitchenFour.innerHTML;
+        pasteLineKitchenFive.innerHTML = lineKitchenFive.innerHTML;
+        pasteLineKitchenSix.innerHTML = lineKitchenSix.innerHTML;
+        pasteLineKitchenSeven.innerHTML = lineKitchenSeven.innerHTML;
+        pasteLineKitchenEight.innerHTML = lineKitchenEight.innerHTML;
+        pasteLineKitchenNine.innerHTML = lineKitchenNine.innerHTML;    
+        
+        
+        }
     }
+    
+    const totalDisplay = document.querySelectorAll('.notANumber');
+    
+    Number(totalDisplay)
